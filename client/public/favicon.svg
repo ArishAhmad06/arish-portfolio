@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <clipPath id="aa-clip"><rect x="0" y="11" width="64" height="38"/></clipPath>
+  </defs>
+  <rect width="64" height="64" fill="#0B0B0C"/>
+  <path d="M5 13V5h8M51 5h8v8M59 51v8h-8M13 59H5v-8" stroke="#F2F0EA" stroke-opacity=".45" stroke-width="1.5"/>
+  <g clip-path="url(#aa-clip)" stroke-width="5" stroke-miterlimit="10">
+    <path d="M10 52 22 16 34 52M14 38H30" stroke="#F2F0EA"/>
+    <path d="M30 52 42 16 54 52M34 38H50" stroke="#FF5B1F"/>
+  </g>
+  <path d="M10 55h44" stroke="#F2F0EA" stroke-opacity=".45" stroke-width="1.5"/>
+</svg>
