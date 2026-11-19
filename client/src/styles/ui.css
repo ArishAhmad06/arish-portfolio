@@ -1,0 +1,137 @@
+/* Small reusable building blocks: Button, Chip, StatusPill, Section, corner marks */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 11px 16px;
+  font-size: 16px;
+  border: 1px solid var(--bd2);
+  border-radius: var(--radius);
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color 0.3s var(--ease),
+    filter 0.3s var(--ease);
+}
+.btn:hover {
+  border-color: var(--acs);
+}
+.btn--primary {
+  background: var(--ac);
+  border-color: var(--ac);
+  color: #0b0b0c;
+  font-weight: 500;
+}
+.btn--primary:hover {
+  filter: brightness(1.1);
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.chip {
+  font: 14px var(--font-mono);
+  padding: 5px 9px;
+  border: 1px solid var(--bd2);
+  border-radius: var(--radius);
+  background: none;
+  color: var(--tx);
+  transition: all 0.25s var(--ease);
+}
+button.chip {
+  cursor: pointer;
+}
+.chip.is-hit {
+  background: var(--ac);
+  border-color: var(--ac);
+  color: #0b0b0c;
+}
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border: 1px solid var(--bd2);
+  border-radius: var(--radius);
+}
+.pill__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ok);
+  animation: pulse 2s infinite;
+}
+.pill--busy .pill__dot {
+  background: var(--er);
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Section scaffold: a 12-column grid with a mono marker above the content */
+.section {
+  position: relative;
+  padding: clamp(64px, 10vw, 120px) 0;
+  border-top: 1px solid var(--bd);
+}
+.section__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+.section__mark {
+  grid-column: 1 / -1;
+}
+.section__mark span {
+  color: var(--acs);
+}
+.section__title {
+  grid-column: 1 / -1;
+  margin-bottom: 24px;
+}
+
+/* Blueprint corner marks for framed visuals */
+.framed {
+  position: relative;
+  border: 1px solid var(--bd2);
+  background: var(--raise);
+}
+.framed::before,
+.framed::after {
+  content: '+';
+  position: absolute;
+  font: 12px var(--font-mono);
+  color: var(--acs);
+}
+.framed::before {
+  top: 2px;
+  left: 5px;
+}
+.framed::after {
+  bottom: 0;
+  right: 5px;
+}
+
+@media (max-width: 900px) {
+  .section__grid {
+    gap: 16px;
+  }
+}
