@@ -1,0 +1,12 @@
+.footer {
+  border-top: 1px solid var(--bd);
+  padding: 36px 0 48px;
+  color: var(--tx2);
+}
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+  justify-content: space-between;
+  align-items: end;
+}
