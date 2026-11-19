@@ -22,6 +22,7 @@ const envSchema = z.object({
   SMTP_PORT: z.preprocess(emptyToUndefined, z.coerce.number().int().positive().default(587)),
   SMTP_USER: z.preprocess(emptyToUndefined, z.string().optional()),
   SMTP_PASS: z.preprocess(emptyToUndefined, z.string().optional()),
+  RESEND_API_KEY: z.preprocess(emptyToUndefined, z.string().optional()),
   CONTACT_TO_EMAIL: z.preprocess(emptyToUndefined, z.string().email().optional()),
   CONTACT_FROM_EMAIL: z.preprocess(emptyToUndefined, z.string().optional()),
 });
