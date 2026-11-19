@@ -1,0 +1,29 @@
+.certs {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+.cert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 190px;
+  padding: 20px;
+  border: 1px dashed var(--bd2);
+}
+.cert h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 8px 0;
+}
+.cert__issuer {
+  color: var(--tx2);
+}
+.cert__image {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--bd);
+}
