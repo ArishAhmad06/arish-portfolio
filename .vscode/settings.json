@@ -1,0 +1,4 @@
+{
+    "prisma-smart-formatter.typescript.defaultFormatter": "esbenp.prettier-vscode",
+    "dotenv.enableAutocloaking": false
+}
