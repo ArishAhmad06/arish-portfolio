@@ -1,0 +1,26 @@
+.skills {
+  grid-column: 1 / -1;
+}
+.skills__category {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+  padding: 22px 0;
+  border-top: 1px solid var(--bd);
+}
+.skills__category h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--tx2);
+}
+.skills__category h3 {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--tx2);
+}
+
+@media (max-width: 900px) {
+  .skills__category {
+    grid-template-columns: 1fr;
+  }
+}
