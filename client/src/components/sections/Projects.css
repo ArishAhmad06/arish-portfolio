@@ -1,0 +1,71 @@
+.projects {
+  grid-column: 1 / -1;
+}
+.project {
+  border-top: 1px solid var(--bd);
+  transition:
+    opacity 0.3s var(--ease),
+    transform 0.7s var(--ease);
+}
+.project.is-dimmed.is-visible {
+  opacity: 0.35;
+}
+.project__inner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: center;
+  padding: 40px 0;
+}
+.project__cover {
+  grid-column: 1 / 7;
+  padding: 8px;
+}
+.project__text {
+  grid-column: 7 / -1;
+}
+/* Alternate sides for an asymmetric rhythm */
+.project:nth-child(even) .project__cover {
+  grid-column: 7 / -1;
+  grid-row: 1;
+}
+.project:nth-child(even) .project__text {
+  grid-column: 1 / 7;
+  grid-row: 1;
+}
+
+.project h3 {
+  font-size: clamp(26px, 3.4vw, 44px);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 10px 0;
+}
+.project__description {
+  color: var(--tx2);
+  margin-bottom: 16px;
+}
+.project__stack {
+  margin-bottom: 16px;
+}
+
+.cover {
+  width: 100%;
+  display: block;
+  color: var(--tx);
+}
+.cover__move {
+  transition: transform 0.6s var(--ease);
+}
+.project__cover:hover .cover__move {
+  transform: translate(6px, -4px);
+}
+
+@media (max-width: 900px) {
+  .project__cover,
+  .project__text,
+  .project:nth-child(even) .project__cover,
+  .project:nth-child(even) .project__text {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
