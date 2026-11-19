@@ -1,0 +1,38 @@
+/* Design tokens. Change colours, fonts and motion here, and the whole site follows. */
+:root {
+  --bg: #0b0b0c;
+  --raise: #111113;
+  --card: #17171a;
+  --tx: #f2f0ea;
+  --tx2: #a1a19a;
+  --tx3: #8a8a84;
+
+  /* Accent: swap these two to rebrand. --ac for fills, --acs for text/borders (needs contrast). */
+  --ac: #ff5b1f;
+  --acs: #ff5b1f;
+
+  --bd: rgba(242, 240, 234, 0.1);
+  --bd2: rgba(242, 240, 234, 0.22);
+  --ok: #4ade80;
+  --er: #f87171;
+
+  --font-ui: 'Space Grotesk', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --header-h: 60px;
+  --radius: 2px;
+}
+
+:root[data-theme='light'] {
+  --bg: #f4f2ec;
+  --raise: #ece9e1;
+  --card: #e4e1d8;
+  --tx: #0b0b0c;
+  --tx2: #46463f;
+  --tx3: #5f5f58;
+  --acs: #c2380a;
+  --bd: rgba(11, 11, 12, 0.12);
+  --bd2: rgba(11, 11, 12, 0.3);
+}
