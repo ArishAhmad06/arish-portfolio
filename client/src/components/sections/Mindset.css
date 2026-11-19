@@ -1,0 +1,60 @@
+.mindset__left {
+  grid-column: 1 / 8;
+}
+.mindset__right {
+  grid-column: 8 / -1;
+}
+.mindset__terminal {
+  min-height: 190px;
+  max-height: 280px;
+}
+.mindset__line {
+  white-space: pre-wrap;
+}
+.mindset__prompt {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+}
+.mindset__prompt input {
+  min-height: 44px;
+  padding: 10px 12px;
+  background: var(--raise);
+  border: 1px solid var(--bd2);
+  border-radius: var(--radius);
+}
+.mindset__suggestions {
+  margin-top: 10px;
+}
+.mindset__quote {
+  min-height: 3.2em;
+  font-size: 22px;
+  color: var(--tx2);
+  animation: fade-in 0.8s var(--ease);
+}
+.mindset__quotes {
+  display: grid;
+  gap: 8px;
+  color: var(--tx2);
+}
+.mindset__interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: var(--tx2);
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .mindset__left,
+  .mindset__right {
+    grid-column: 1 / -1;
+  }
+}
